@@ -1,12 +1,14 @@
+import PropTypes from 'prop-types';
+import { Card, UserInfo } from './Profile.styled';
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
+    <Card>
+      <UserInfo>
+        <img src={avatar} alt={username} />
         <p class="name">{username}</p>
         <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
-      </div>
+      </UserInfo>
 
       <ul class="stats">
         <li>
@@ -22,6 +24,12 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           <span class="quantity">{stats.likes}</span>
         </li>
       </ul>
-    </div>
+    </Card>
   );
+};
+Profile.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    
+  }),
 };
