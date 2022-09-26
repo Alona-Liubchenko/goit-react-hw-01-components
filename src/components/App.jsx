@@ -22,9 +22,10 @@ import user from '../database/user.json';
 import data from '../database/data.json';
 import friends from '../database/friends.json';
 import transactions from '../database/transactions.json';
+import { Box } from './App.styled';
 export const App = () => {
   return (
-    <div>
+    <Box>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -36,6 +37,6 @@ export const App = () => {
       {/* <Statistics stats={data} /> */}
       <FriendList friends={friends} />;
       <TransactionHistory items={transactions} />;
-    </div>
+    </Box>
   );
 };
