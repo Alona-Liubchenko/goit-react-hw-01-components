@@ -2,16 +2,17 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   width: 350px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   background: white;
+  box-shadow: rgb(0 0 0 / 55%) 10px 10px 5px 0px;
 `;
 export const UserInfo = styled.div`
   padding: 10px;
   text-align: center;
   width: auto;
 `;
-export const Img = styled.img`
+export const UserAvatar = styled.img`
   width: 200px;
   height: auto;
   margin: 0 auto;
@@ -38,12 +39,23 @@ export const Stats = styled.ul`
 
   justify-content: center;
 `;
-export const Li = styled.li`
+export const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
   width: 100%;
   border: 1px solid gray;
+  &:not(:last-child) {
+    border-right: none;
+  }
   align-items: center;
+  padding: 5px;
 `;
-export const Label = styled.span``;
-export const Quantity = styled.span``;
+export const Label = styled.span`
+  font-size: 18px;
+  font-weight: 400;
+`;
+export const Quantity = styled.span`
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+`;
